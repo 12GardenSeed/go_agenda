@@ -1,4 +1,4 @@
-packge entities
+package entities
 
 // user entity
 // one user map to one user entity
@@ -22,5 +22,11 @@ type User struct {
 //Create a new User instance and renturn
 
 func NewUser(username string, password string, email string, phone string) *User{
-return &User{-1,"",username, password, email, phone}
+    return &User{-1,"",username, password, email, phone}
+    if len(userName) == 0 {
+        panic("UserName shold not null!")
+    }
+    if len(password) < 5 {
+        panic("Password must be more than 4 words!")
+    }
 }
