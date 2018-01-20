@@ -52,8 +52,8 @@ func initTables() {
         );
         CREATE TABLE meetings(
             id INTEGER PRIMARY KEY,
+						owner TEXT,
             title TEXT,
-            host TEXT,
             members TEXT,
             starttime TEXT,
             endtime TEXT
